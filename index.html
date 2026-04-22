@@ -45,9 +45,9 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: #E6EDF2;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
     .nav {
@@ -349,14 +349,13 @@ h3 {
     }
 
     .about-copy,
-    .about-side {
-      background: var(--surface);
-      border: 1px solid rgba(226, 230, 234, 0.95);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.8rem;
-    }
-
+.about-side {
+  background: #ffffff;
+  border: 1px solid rgba(14, 26, 36, 0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.8rem;
+}
     .about-list li,
     .approach-list li,
     .contact-list li,
@@ -366,18 +365,18 @@ h3 {
     }
 
     .price {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--accent-dark);
-      background: rgba(219, 159, 0, 0.1);
-      border: 1px solid rgba(219, 159, 0, 0.18);
-      padding: 0.52rem 0.8rem;
-      border-radius: 999px;
-      margin-bottom: 0.9rem;
-    }
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--accent-dark);
+  background: rgba(111, 143, 166, 0.12);
+  border: 1px solid rgba(111, 143, 166, 0.22);
+  padding: 0.52rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+}
 
     .service-meta {
       font-size: 0.93rem;
@@ -405,7 +404,22 @@ h3 {
       gap: 1rem;
       flex-wrap: wrap;
     }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
 
+.brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
     @media (max-width: 920px) {
       .hero-grid,
       .about-wrap,
@@ -450,22 +464,9 @@ h3 {
   font-size: 1.15rem;
   margin-bottom: 0.2rem;
 }
-      .brand {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.brand-logo {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
+  .brand-logo {
+  height: 34px;
+}    
     }
   </style>
 </head>
@@ -473,14 +474,12 @@ h3 {
   <header class="site-header">
     <div class="container nav">
       <a href="#top" class="brand">
-        <a href="#top" class="brand">
   <img src="TK_Movement_Logo_transparent.png" alt="TK Movement" class="brand-logo">
   <div class="brand-text">
     <span class="brand-mark">TK Movement</span>
-    <span class="brand-sub">Personal Training & Movement Coaching</span>
+    <span class="brand-sub">Personal Training &amp; Movement Coaching</span>
   </div>
 </a>
-      </a>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -558,7 +557,8 @@ h3 {
           <div class="about-copy">
             <p>Dan’s coaching approach combines strength training, functional movement, and martial arts-based body awareness. It is designed for people who want to improve mobility, rebuild strength after injury, and feel more capable in everyday life.</p>
             <p>The service is especially suited to those who have felt excluded by mainstream fitness culture or who need a more individualised starting point.</p>
-            <p>Dan is completing a NZQA Level 4 Certificate in Exercise, has a NZQA Level 3 Certificate in Coaching, and has a background in martial arts and movement training.</p> Sessions aim to reduce fear around movement and replace it with structure, clarity, and gradual progress.</p>
+            <p>Dan is completing a NZQA Level 4 Certificate in Exercise, has a NZQA Level 3 Certificate in Coaching, and is a martial arts instructor and founder of Taikan Kai Karate.</p>
+<p>Sessions aim to reduce fear around movement and replace it with structure, clarity, and gradual progress.</p>
             <p>TK Movement is guided by <a href="https://taikankaikarate.org" target="_blank" rel="noopener noreferrer" class="tk-link">Taikan Kai</a> principles while operating as an independent personal training service.</p>
           </div>
           <aside class="about-side">
@@ -663,9 +663,9 @@ h3 {
             <h3>Get in touch</h3>
             <p>Replace the placeholder details below with your preferred contact information before publishing.</p>
             <div class="contact-list">
-              <p><strong>Email</strong> hello@example.com</p>
+              <p><strong>Email</strong> dbrighurst@gmail.com</p>
               <p><strong>Location</strong> New Plymouth, New Zealand</p>
-              <p><strong>Instagram</strong> @tkmovement</p>
+              <p><strong>Instagram</strong> @tk_movement_pt</p>
             </div>
           </article>
           <article class="contact-card">
