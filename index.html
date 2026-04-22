@@ -423,6 +423,22 @@
   font-size: 1.15rem;
   margin-bottom: 0.2rem;
 }
+      .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
     }
   </style>
 </head>
@@ -430,8 +446,13 @@
   <header class="site-header">
     <div class="container nav">
       <a href="#top" class="brand">
-        <span class="brand-mark">TK Movement</span>
-        <span class="brand-sub">Personal Training &amp; Movement Coaching</span>
+        <a href="#top" class="brand">
+  <img src="TK_Movement_Logo.png" alt="TK Movement Logo" class="brand-logo" />
+  <div class="brand-text">
+    <span class="brand-mark">TK Movement</span>
+    <span class="brand-sub">Personal Training & Movement Coaching</span>
+  </div>
+</a>
       </a>
       <nav class="nav-links">
         <a href="#about">About</a>
