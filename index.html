@@ -1,11 +1,571 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>TK Movement</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TK Movement | Personal Training & Movement Coaching</title>
+  <meta name="description" content="TK Movement offers personal training and movement coaching in New Plymouth, focused on chronic pain, previous injury, confidence, and longevity." />
+  <style>
+    :root {
+      --bg: #f6f3ec;
+      --surface: #fffdf8;
+      --surface-2: #efe8db;
+      --text: #1f1c17;
+      --muted: #62594d;
+      --accent: #8b6b3f;
+      --accent-dark: #6f542f;
+      --border: #d8cdbd;
+      --shadow: 0 16px 36px rgba(31, 28, 23, 0.08);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f8f5ef 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 245, 239, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(216, 205, 189, 0.75);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .brand-mark {
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-sub {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .button {
+      background: var(--accent);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .button:hover { background: var(--accent-dark); }
+
+    .button-secondary {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .button-secondary:hover {
+      background: rgba(139, 107, 63, 0.08);
+      border-color: var(--accent);
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-card,
+    .card,
+    .service-card,
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid rgba(216, 205, 189, 0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 2.5rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 { line-height: 1.15; margin: 0; }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 4.4rem);
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 60ch;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0 1.25rem;
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .hero-card {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+      background: linear-gradient(180deg, var(--surface) 0%, #f2ebde 100%);
+    }
+
+    .hero-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-card ul,
+    .service-card ul,
+    .about-list,
+    .contact-list,
+    .approach-list {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 1.35rem 0 1rem;
+    }
+
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.7rem, 2.5vw, 2.6rem);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 64ch;
+    }
+
+    .cards-3,
+    .services-grid,
+    .contact-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+
+    .card,
+    .service-card,
+    .contact-card {
+      padding: 1.5rem;
+    }
+
+    .card h3,
+    .service-card h3,
+    .contact-card h3 {
+      margin-bottom: 0.7rem;
+      font-size: 1.15rem;
+    }
+
+    .card p,
+    .service-card p,
+    .contact-card p,
+    .about-copy p {
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: 0.95rem;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .about-copy,
+    .about-side {
+      background: var(--surface);
+      border: 1px solid rgba(216, 205, 189, 0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.7rem;
+    }
+
+    .about-list li,
+    .approach-list li,
+    .contact-list li,
+    .service-card li,
+    .hero-card li {
+      margin-bottom: 0.55rem;
+    }
+
+    .price {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: rgba(139, 107, 63, 0.08);
+      border: 1px solid rgba(139, 107, 63, 0.18);
+      padding: 0.5rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+    }
+
+    .service-meta {
+      font-size: 0.93rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.98rem;
+    }
+
+    .footer {
+      padding: 2.5rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer-wrap {
+      border-top: 1px solid rgba(216, 205, 189, 0.9);
+      padding-top: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .about-wrap,
+      .contact-grid,
+      .cards-3,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 0.9rem;
+      }
+
+      .hero {
+        padding-top: 3.5rem;
+      }
+
+      .hero-copy,
+      .hero-card,
+      .card,
+      .service-card,
+      .contact-card,
+      .about-copy,
+      .about-side {
+        padding: 1.35rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark">TK Movement</span>
+        <span class="brand-sub">Personal Training &amp; Movement Coaching</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<h1>TK Movement</h1>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">New Plymouth • 1:1 &amp; 2-person coaching</div>
+          <h1>Personal training for people rebuilding confidence in movement.</h1>
+          <p class="lead">TK Movement supports adults dealing with chronic pain, previous injury, or reduced confidence in exercise. The focus is on safe strength, better movement, and long-term quality of life.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Book a free consultation</a>
+            <a class="button-secondary" href="#services">View services</a>
+          </div>
+          <p class="hero-note">Guided by Taikan Kai principles of awareness, respect, and embodied understanding.</p>
+        </div>
 
+        <aside class="hero-card">
+          <div>
+            <h2>Who this is for</h2>
+            <ul>
+              <li>Adults managing chronic pain or previous injury</li>
+              <li>People who feel unsure or intimidated by typical gym spaces</li>
+              <li>Those wanting strength, mobility, and longevity rather than aesthetics</li>
+            </ul>
+          </div>
+          <div>
+            <h2>What you can expect</h2>
+            <ul>
+              <li>Supportive, personalised coaching</li>
+              <li>Clear progressions and practical movement work</li>
+              <li>Training that stays within scope and respects your starting point</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why TK Movement</h2>
+          <p>This is not about pushing through pain or chasing intensity for its own sake. It is about rebuilding trust in your body, developing strength safely, and creating a foundation for long-term resilience.</p>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <h3>Safe progression</h3>
+            <p>Exercise is adapted to the individual, with a focus on control, confidence, and sustainable progress rather than rushed intensity.</p>
+          </article>
+          <article class="card">
+            <h3>Personal understanding</h3>
+            <p>Coaching is informed by lived experience of injury recovery, as well as a strong background in teaching movement and body awareness.</p>
+          </article>
+          <article class="card">
+            <h3>Long-term focus</h3>
+            <p>The goal is not short-term hype. It is better movement, greater independence, and improved quality of life over time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About</h2>
+          <p>TK Movement is the personal training and movement coaching brand of Dan Brighurst, created to support people who need a calmer, more thoughtful approach to exercise.</p>
+        </div>
+        <div class="about-wrap">
+          <div class="about-copy">
+            <p>Dan’s coaching approach combines strength training, functional movement, and martial arts-based body awareness. It is designed for people who want to improve mobility, rebuild strength after injury, and feel more capable in everyday life.</p>
+            <p>The service is especially suited to those who have felt excluded by mainstream fitness culture or who need a more individualised starting point. Sessions aim to reduce fear around movement and replace it with structure, clarity, and gradual progress.</p>
+            <p>TK Movement is guided by Taikan Kai principles while operating as an independent personal training service.</p>
+          </div>
+          <aside class="about-side">
+            <h3>Core focus</h3>
+            <ul class="about-list">
+              <li>Chronic pain and previous injury</li>
+              <li>Movement confidence and body awareness</li>
+              <li>Strength for longevity and everyday function</li>
+              <li>Inclusive, respectful coaching</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Services</h2>
+          <p>Simple, supportive services built around quality coaching, accessibility, and real-world progress.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="price">Free consultation</div>
+            <h3>Initial consultation</h3>
+            <p class="service-meta">A simple starting point to discuss goals, barriers, training history, and whether the service is the right fit.</p>
+            <ul>
+              <li>Brief conversation about your needs</li>
+              <li>General overview of how coaching works</li>
+              <li>Opportunity to ask questions before committing</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="price">$50–$60 per session</div>
+            <h3>1:1 personal training</h3>
+            <p class="service-meta">Individual coaching focused on strength, movement quality, and confidence.</p>
+            <ul>
+              <li>Personalised exercise guidance</li>
+              <li>Adapted approach for pain, injury, or low confidence</li>
+              <li>Steady progression based on your ability and goals</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="price">$40 per person</div>
+            <h3>2-person training</h3>
+            <p class="service-meta">A small-group option for people who would prefer to train with a partner.</p>
+            <ul>
+              <li>More accessible price point</li>
+              <li>Support and motivation from training with someone you know</li>
+              <li>Limited to two people to maintain coaching quality</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Approach</h2>
+          <p>Sessions are designed to be respectful, clear, and responsive to the individual. The emphasis is on coaching people, not just prescribing exercises.</p>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <h3>Respectful and inclusive</h3>
+            <ul class="approach-list">
+              <li>Communication is adapted to the individual</li>
+              <li>Clients are treated with dignity and respect</li>
+              <li>Boundaries, comfort, and personal context matter</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Within scope</h3>
+            <ul class="approach-list">
+              <li>Training stays within exercise professional scope</li>
+              <li>Medical or injury concerns are referred when needed</li>
+              <li>Recent or unresolved injuries may require clearance from a GP or physiotherapist</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Built for real life</h3>
+            <ul class="approach-list">
+              <li>Focus on long-term function rather than trends</li>
+              <li>Progressions are realistic and sustainable</li>
+              <li>Confidence grows alongside physical capacity</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact</h2>
+          <p>Ready to ask a question or book a free consultation? Start with a simple message.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Get in touch</h3>
+            <p>Replace the placeholder details below with your preferred contact information before publishing.</p>
+            <div class="contact-list">
+              <p><strong>Email</strong> hello@example.com</p>
+              <p><strong>Location</strong> New Plymouth, New Zealand</p>
+              <p><strong>Instagram</strong> @tkmovement</p>
+            </div>
+          </article>
+          <article class="contact-card">
+            <h3>Good fit if you are...</h3>
+            <ul class="contact-list">
+              <li>returning to exercise after time away</li>
+              <li>looking for support with movement confidence</li>
+              <li>wanting a calmer, more personalised coaching style</li>
+            </ul>
+            <p><a class="button" href="mailto:hello@example.com">Email TK Movement</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>© TK Movement</div>
+      <div>Personal Training &amp; Movement Coaching • New Plymouth</div>
+    </div>
+  </footer>
 </body>
 </html>
