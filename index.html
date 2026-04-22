@@ -392,6 +392,34 @@
       .about-side {
         padding: 1.35rem;
       }
+      .profile-image-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #d9dde2;
+  margin-bottom: 1rem;
+}
+
+.profile-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-caption {
+  font-size: 0.98rem;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+
+.profile-caption strong {
+  display: block;
+  color: var(--text);
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
     }
   </style>
 </head>
@@ -426,23 +454,21 @@
         </div>
 
         <aside class="hero-card">
-          <div>
-            <h2>Who this is for</h2>
-            <ul>
-              <li>Adults managing chronic pain or previous injury</li>
-              <li>People who feel unsure or intimidated by typical gym spaces</li>
-              <li>Those wanting strength, mobility, and longevity rather than aesthetics</li>
-            </ul>
-          </div>
-          <div>
-            <h2>What you can expect</h2>
-            <ul>
-              <li>Supportive, personalised coaching</li>
-              <li>Clear progressions and practical movement work</li>
-              <li>Training that stays within scope and respects your starting point</li>
-            </ul>
-          </div>
-        </aside>
+  <div class="profile-image-wrap">
+    <img src="your-image.jpg" alt="Dan Brighurst - Personal Trainer and Movement Coach" />
+  </div>
+
+  <div class="profile-caption">
+    <strong>Dan Brighurst</strong><br>
+    Personal Trainer &amp; Movement Coach
+  </div>
+
+  <ul>
+    <li>NZQA Level 4 Certificate in Exercise (in progress)</li>
+    <li>Injury recovery and movement confidence focused</li>
+    <li>Martial arts and coaching background</li>
+  </ul>
+</aside>
       </div>
     </section>
 
