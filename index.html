@@ -274,7 +274,14 @@ h3 {
     }
 
     .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+    .service-card--featured {
+  border: 2px solid var(--accent);
+  transform: translateY(-4px);
+}
     .contact-grid { grid-template-columns: 1fr 1fr; }
 
     .card,
@@ -340,6 +347,12 @@ h3 {
   content: " ↗";
   font-size: 0.8em;
   opacity: 0.7;
+}
+    .service-note {
+  margin-top: 1.4rem;
+  color: var(--muted);
+  max-width: 720px;
+  font-weight: 500;
 }
     
 .profile-image-wrap {
@@ -602,39 +615,65 @@ h3 {
           <p>Simple, supportive services built around quality coaching, accessibility, and real-world progress.</p>
         </div>
         <div class="services-grid">
-          <article class="service-card">
-            <div class="price">Free consultation</div>
-            <h3>Initial Consultation</h3>
-            <p class="service-meta">A simple starting point to discuss goals, barriers, training history, and whether the service is the right fit.</p>
-            <ul>
-              <li>Brief conversation about your needs</li>
-              <li>General overview of how coaching works</li>
-              <li>Opportunity to ask questions before committing</li>
-            </ul>
-          </article>
+  <article class="service-card">
+    <div class="price">Free consultation</div>
+    <h3>Initial Consultation</h3>
+    <p class="service-meta">A simple starting point to discuss goals, barriers, training history, and whether this service is the right fit.</p>
+    <ul>
+      <li>Brief conversation about your needs</li>
+      <li>General overview of how coaching works</li>
+      <li>Opportunity to ask questions before committing</li>
+    </ul>
+  </article>
 
-          <article class="service-card">
-            <div class="price">$50 per 1 hour session</div>
-            <h3>1:1 Personal Training</h3>
-            <p class="service-meta">Individual coaching focused on strength, movement quality, and confidence.</p>
-            <ul>
-              <li>Personalised exercise guidance</li>
-              <li>Adapted approach for pain, injury, or low confidence</li>
-              <li>Steady progression based on your ability and goals</li>
-            </ul>
-          </article>
+  <article class="service-card">
+    <div class="price">$50 per coaching session</div>
+    <h3>1:1 Personal Coaching</h3>
+    <p class="service-meta">Personalised coaching focused on movement, strength, and confidence.</p>
+    <ul>
+      <li>60-minute coaching session</li>
+      <li>Suitable for all levels</li>
+      <li>Supports injury recovery, movement confidence, and general fitness goals</li>
+    </ul>
+  </article>
 
-          <article class="service-card">
-            <div class="price">$40 per person (1 hour session)</div>
-            <h3>2-Person Training</h3>
-            <p class="service-meta">A small-group option for people who would prefer to train with a partner.</p>
-            <ul>
-              <li>More accessible price point</li>
-              <li>Support and motivation from training with someone you know</li>
-              <li>Limited to two people to maintain coaching quality</li>
-            </ul>
-          </article>
-        </div>
+  <article class="service-card">
+    <div class="price">$80 total / $40 each</div>
+    <h3>Bring a Buddy</h3>
+    <p class="service-meta">2:1 coaching for two people training together.</p>
+    <ul>
+      <li>Train with a friend, partner, or family member</li>
+      <li>Shared coaching with individualised guidance</li>
+      <li>Great for motivation and consistency</li>
+    </ul>
+  </article>
+
+  <article class="service-card service-card--featured">
+    <div class="price">Recommended</div>
+    <h3>2x Weekly Coaching</h3>
+    <p class="service-meta"><strong>$90 per week</strong> for 2 x 1:1 coaching sessions.</p>
+    <ul>
+      <li>Best for consistent progress and long-term results</li>
+      <li>Structured progression and ongoing support</li>
+      <li>Ideal for clients serious about building strength and confidence</li>
+    </ul>
+  </article>
+
+  <article class="service-card">
+    <div class="price">$25 per week</div>
+    <h3>Online Coaching</h3>
+    <p class="service-meta">Remote support for clients wanting structure outside in-person coaching.</p>
+    <ul>
+      <li>Personalised movement plan</li>
+      <li>Progress tracking and adjustments</li>
+      <li>Messaging support</li>
+      <li>Designed around your schedule and available equipment</li>
+    </ul>
+  </article>
+          <p class="service-note">
+  All coaching is tailored to the individual, with a focus on safe progression, confidence, and long-term movement quality.
+</p>
+</div>
       </div>
     </section>
 
