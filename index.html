@@ -326,6 +326,22 @@ h3 {
 .service-card ul {
   color: var(--muted);
 }
+.contact-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+    .contact-link::after {
+  content: " ↗";
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+    
 .profile-image-wrap {
   width: 100%;
   max-width: 320px;   /* controls overall size */
@@ -670,7 +686,12 @@ h3 {
             <div class="contact-list">
               <p><strong>Email</strong> dbrighurst@gmail.com</p>
               <p><strong>Location</strong> New Plymouth, New Zealand</p>
-              <p><strong>Instagram</strong> @tk_movement_pt</p>
+              <p>
+  <strong>Instagram</strong><br>
+  <a href="https://instagram.com/tkmovement" target="_blank" rel="noopener" class="contact-link">
+    instagram.com/tkmovement
+  </a>
+</p>
             </div>
           </article>
           <article class="contact-card">
