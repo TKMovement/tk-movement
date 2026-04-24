@@ -464,11 +464,17 @@ h3 {
   opacity: 0.7;
 }
     
-    .service-note {
+    .service-note-wide {
+  width: 100%;
   max-width: 900px;
-  margin: 1.4rem auto 0 auto;
-  color: var(--muted);
-  font-weight: 500;
+  margin: 2.5rem auto 1.2rem;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.6;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
 }
 
 /* IMAGE ROW */
@@ -594,6 +600,48 @@ h3 {
       color: var(--muted);
       margin-bottom: 0.8rem;
     }
+
+    .service-philosophy {
+  max-width: 900px;
+  margin: 3rem auto 1.5rem;
+  padding: 1.6rem 2rem;
+  text-align: center;
+
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(6px);
+
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  position: relative;
+}
+
+.service-philosophy p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text);
+}
+    .service-philosophy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+    .philosophy-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 
     .contact-card strong {
       display: block;
@@ -868,7 +916,7 @@ h3 {
       <p class="service-meta">Stay consistent and supported wherever you train</p>
     </article>
 
-          <p class="service-note">All coaching is tailored to the individual, with a focus on safe progression, confidence, and long-term movement quality.</p>
+          
           
   <div class="service-featured service-featured--primary">
   <div class="featured-label">Recommended Path</div>
@@ -903,6 +951,10 @@ h3 {
 
 
   </div> <!-- services-grid ends -->
+      <div class="service-philosophy">
+  <span class="philosophy-label">APPROACH</span>
+  <p>All coaching is tailored to the individual, with a focus on safe progression, confidence, and long-term movement quality.</p>
+</div>
       <p class="service-guidance">If you're looking for structure, support, and lasting progress, this is the best place to start.</p>
 
 
