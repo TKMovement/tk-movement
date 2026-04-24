@@ -359,28 +359,45 @@ h3 {
   position: relative;
 }
 
-.service-featured--primary::before {
-  content: "RECOMMENDED PATH";
-  position: absolute;
-  top: -12px;
-  left: 24px;
+.featured-label {
+  display: inline-flex;
+  width: fit-content;
   background: var(--accent);
-  color: #fff;
+  color: #ffffff;
   font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
   border-radius: 999px;
+  margin-bottom: 1rem;
 }
 
 .service-featured--secondary {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+}
+    .service-featured--secondary h3 {
+  opacity: 0.9;
+}
+
+.service-featured--secondary .service-meta {
+  opacity: 0.85;
 }
 
 .service-cta {
   font-weight: 700;
   color: var(--text);
 }
-    
+
+    .service-guidance {
+  max-width: 700px;
+  margin: 2rem auto 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--text);
+}
     
     .card,
 .service-card,
@@ -852,6 +869,7 @@ h3 {
     </article>
           
   <div class="service-featured service-featured--primary">
+  <div class="featured-label">Recommended Path</div>
   <div class="price">Structured Progression Option</div>
   <h3>8-Week Coaching Block</h3>
   <p class="service-meta">Designed for people who want consistent progress and real change over time.</p>
@@ -883,8 +901,8 @@ h3 {
 
 
   </div> <!-- services-grid ends -->
-<p class="service-note">
-  All coaching is tailored to the individual, with a focus on safe progression, confidence, and long-term movement quality.</p>
+      <p class="service-guidance">If you're looking for structure, support, and lasting progress, this is the best place to start.</p>
+<p class="service-note">All coaching is tailored to the individual, with a focus on safe progression, confidence, and long-term movement quality.</p>
 
     
 
