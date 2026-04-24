@@ -477,58 +477,51 @@ h3 {
   border-top: 1px solid var(--border);
 }
 
-/* IMAGE ROW */
-.testimonial-images {
+.testimonial-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1.2rem; /* was 2rem */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
 }
 
-.testimonial-image {
-  aspect-ratio: 16 / 9;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-    .testimonial-image:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+.testimonial-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(14, 26, 36, 0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem;
+  min-height: 260px;
 }
 
-/* TEXT */
-.testimonial-content {
-  margin-top: 1rem;
-  text-align: left;
-  max-width: 700px;
-  margin: 1.5rem auto 0 auto;
-  background: rgba(255,255,255,0.6);
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.testimonial-card::before {
+  content: "“";
+  position: absolute;
+  top: 0.8rem;
+  right: 1.2rem;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.12;
 }
 
 .testimonial-quote {
-  font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 1.7;
-  max-width: 650px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0 0 1.2rem;
 }
 
 .testimonial-author {
-  margin-top: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.7rem;
 }
 
-.testimonial-context {
+.testimonial-result {
   color: var(--muted);
-  font-size: 0.9rem;
-}
-    #testimonial .container {
-  max-width: 900px;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 /* MOBILE */
@@ -696,6 +689,8 @@ h3 {
       .contact-grid,
       .cards-3,
       .services-grid {
+        grid-template-columns: 1fr;
+      .testimonial-grid {
         grid-template-columns: 1fr;
       }
 
@@ -962,42 +957,43 @@ h3 {
  <!-- services-grid ends -->
       
       
-
-    
-
 <section class="section" id="testimonial">
   <div class="container">
-
     <div class="section-heading">
       <h2>Client Results</h2>
       <p>Real experiences from people rebuilding confidence in movement.</p>
     </div>
 
-    <!-- IMAGES -->
-    <div class="testimonial-images">
-      <div class="testimonial-image" style="background-image: url('image1.jpg');"></div>
-<div class="testimonial-image" style="background-image: url('image2.jpg');"></div>
+    <div class="testimonial-grid">
+      <article class="testimonial-card">
+        <p class="testimonial-quote">
+          “I went from being nervous about injury to feeling strong and confident again. Training finally feels safe.”
+        </p>
+        <p class="testimonial-author">— Sarah, returned to exercise after injury</p>
+        <p class="testimonial-result">Now training consistently 2x per week</p>
+      </article>
+
+      <article class="testimonial-card">
+        <p class="testimonial-quote">
+          “I had no idea where to start. The structure and guidance made everything feel clear and manageable.”
+        </p>
+        <p class="testimonial-author">— Mark, new to strength training</p>
+        <p class="testimonial-result">Built confidence and routine within 6 weeks</p>
+      </article>
+
+      <article class="testimonial-card">
+        <p class="testimonial-quote">
+          “I always felt out of place in gyms. This felt completely different — supportive, calm, and tailored to me.”
+        </p>
+        <p class="testimonial-author">— Emma, rebuilding confidence</p>
+        <p class="testimonial-result">Improved mobility and everyday strength</p>
+      </article>
     </div>
-
-    <!-- TEXT -->
-    <div class="testimonial-content">
-      <p class="testimonial-quote">
-        “Training with Dan completely changed how I feel about movement. 
-        I went from being nervous about injury to feeling strong, capable, 
-        and confident again.”
-      </p>
-
-      <p class="testimonial-author">
-        — Client Name
-      </p>
-
-      <p class="testimonial-context">
-        Returned to exercise after injury
-      </p>
-    </div>
-
   </div>
 </section>
+    
+
+
     
     <section class="section" id="approach">
       <div class="container">
