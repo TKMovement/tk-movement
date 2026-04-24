@@ -12,9 +12,9 @@
   --surface-2: #E6EDF2;  /* Soft Mist */
   --text: #0E1A24;       /* Soft Mist */
   --muted: #5E6B76;      /* Cool Grey */
-  --accent: #5b7f95;      /* stronger than current */
-  --accent-soft: #e3edf3; /* background tint */
-  --accent-dark: #5E7C92;
+  --accent: #5b7f95;        /* main brand */
+  --accent-soft: #e3edf3;   /* backgrounds */
+  --accent-strong: #3f647a; /* hover / emphasis */
 
   --border: rgba(138, 152, 166, 0.22);
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
@@ -133,7 +133,7 @@
 
 .button:hover,
 .button-primary:hover {
-  background: var(--accent-dark);
+  background: var(--accent-strong);
   transform: translateY(-1px);
 }
 
@@ -179,7 +179,7 @@
       font-size: 0.82rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent-dark);
+      color: var(--accent-strong)
       font-weight: 800;
       margin-bottom: 1rem;
     }
@@ -213,7 +213,7 @@
     }
 
     .tk-link {
-      color: var(--accent-dark);
+      color: var(--accent-strong)
       font-weight: 700;
       text-decoration: none;
     }
@@ -312,6 +312,19 @@
     .section-heading h2,
 h1,
 h2,
+    .section-heading h2 {
+  position: relative;
+}
+
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
 h3 {
   color: var(--text);
 }
@@ -364,14 +377,15 @@ h3 {
 
 .service-featured--primary {
   border: 2px solid var(--accent);
-  position: relative;
+  box-shadow: 0 20px 40px rgba(91, 127, 149, 0.15);
 }
 
 .featured-label {
   display: inline-flex;
   width: fit-content;
-  background: var(--accent);
-  color: #ffffff;
+  background: var(--accent-soft);
+  ccolor: var(--accent-strong);
+  border: 1px solid var(--accent);
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -428,7 +442,8 @@ h3 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
+  opacity: 0.8;
   background: var(--accent);
 }
     
@@ -509,7 +524,7 @@ h3 {
   font-size: 4rem;
   line-height: 1;
   color: var(--accent);
-  opacity: 0.12;
+  opacity: 0.2;
 }
 
 .testimonial-quote {
@@ -599,9 +614,9 @@ h3 {
   gap: 0.45rem;
   font-size: 0.95rem;
   font-weight: 800;
-  color: var(--accent-dark);
-  background: rgba(111, 143, 166, 0.12);
-  border: 1px solid rgba(111, 143, 166, 0.22);
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
   padding: 0.52rem 0.8rem;
   border-radius: 999px;
   margin-bottom: 0.9rem;
@@ -700,7 +715,7 @@ h3 {
   font-weight: 600;
 }
     .contact-link:hover {
-  color: var(--accent-dark);
+  color: var(--accent-strong);
 }
     @media (max-width: 920px) {
       .hero-grid,
@@ -720,6 +735,9 @@ h3 {
 
       .nav-links {
         gap: 0.9rem;
+      }
+      .button:hover {
+         background: var(--accent-strong);
       }
 
       .hero {
