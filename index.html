@@ -412,6 +412,49 @@ h3 {
   color: var(--muted);
   font-weight: 500;
 }
+
+/* IMAGE ROW */
+.testimonial-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-image {
+  aspect-ratio: 16 / 9; /* landscape */
+  background: rgba(255,255,255,0.6);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.testimonial-content {
+  max-width: 700px;
+}
+
+.testimonial-quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.testimonial-context {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .testimonial-images {
+    grid-template-columns: 1fr;
+  }
+}
     
 </div>
 .profile-image-wrap {
@@ -758,6 +801,40 @@ h3 {
       </div>
     </section>
 
+<section class="section" id="testimonial">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Client Results</h2>
+      <p>Real experiences from people rebuilding confidence in movement.</p>
+    </div>
+
+    <!-- IMAGES -->
+    <div class="testimonial-images">
+      <div class="testimonial-image"></div>
+      <div class="testimonial-image"></div>
+    </div>
+
+    <!-- TEXT -->
+    <div class="testimonial-content">
+      <p class="testimonial-quote">
+        “Training with Dan completely changed how I feel about movement. 
+        I went from being nervous about injury to feeling strong, capable, 
+        and confident again.”
+      </p>
+
+      <p class="testimonial-author">
+        — Client Name
+      </p>
+
+      <p class="testimonial-context">
+        Returned to exercise after injury
+      </p>
+    </div>
+
+  </div>
+</section>
+    
     <section class="section" id="approach">
       <div class="container">
         <div class="section-heading">
