@@ -422,10 +422,17 @@ h3 {
 }
 
 .testimonial-image {
-  aspect-ratio: 16 / 9; /* landscape */
-  background: rgba(255,255,255,0.6);
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+    .testimonial-image:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
 }
 
 /* TEXT */
@@ -433,6 +440,7 @@ h3 {
   margin-top: 1rem;
   text-align: left;
   max-width: 700px;
+  margin: 1.5rem auto 0 auto;
   background: rgba(255,255,255,0.6);
   padding: 1.5rem;
   border-radius: 16px;
@@ -821,8 +829,8 @@ h3 {
 
     <!-- IMAGES -->
     <div class="testimonial-images">
-      <div class="testimonial-image"></div>
-      <div class="testimonial-image"></div>
+      <div class="testimonial-image" style="background-image: url('image1.jpg');"></div>
+<div class="testimonial-image" style="background-image: url('image2.jpg');"></div>
     </div>
 
     <!-- TEXT -->
