@@ -12,7 +12,8 @@
   --surface-2: #E6EDF2;  /* Soft Mist */
   --text: #0E1A24;       /* Soft Mist */
   --muted: #5E6B76;      /* Cool Grey */
-  --accent: #6F8FA6;     /* Steel Blue */
+  --accent: #5b7f95;      /* stronger than current */
+  --accent-soft: #e3edf3; /* background tint */
   --accent-dark: #5E7C92;
 
   --border: rgba(138, 152, 166, 0.22);
@@ -35,7 +36,7 @@
   margin: 0;
   font-family: Inter, Arial, Helvetica, sans-serif;
   background: #E6EDF2;
-  color: var(--text);
+  olor: #1f2933; /* deeper charcoal */
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -293,6 +294,13 @@
     .section {
       padding: 1.6rem 0 1.15rem;
     }
+    .section {
+  background: #f5f7f9;
+}
+
+.section:nth-child(even) {
+  background: #eef3f6;
+}
 
     .section-heading {
       display: flex;
@@ -717,6 +725,13 @@ h3 {
       .hero {
         padding-top: 3.5rem;
       }
+        .hero {
+  background: linear-gradient(
+    180deg,
+    #eef3f6 0%,
+    #f8fafc 100%
+  );
+}
 
       .hero-copy,
       .hero-card,
