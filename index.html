@@ -284,6 +284,39 @@ h3 {
 }
     .contact-grid { grid-template-columns: 1fr 1fr; }
 
+.service-horizontal {
+  margin-top: 2.5rem;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  padding: 1.8rem;
+}
+
+.service-horizontal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.service-horizontal-left h3 {
+  margin-top: 0.6rem;
+}
+
+.service-horizontal-right ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.service-horizontal-right li {
+  margin-bottom: 0.5rem;
+}
+    @media (max-width: 768px) {
+  .service-horizontal-content {
+    grid-template-columns: 1fr;
+  }
+}
+    
     .card,
 .service-card,
 .contact-card,
@@ -659,17 +692,29 @@ h3 {
     </ul>
   </article>
 
-  <article class="service-card">
-    <div class="price">$25 per week</div>
-    <h3>Online Coaching</h3>
-    <p class="service-meta">Remote support for clients wanting structure outside in-person coaching.</p>
-    <ul>
-      <li>Personalised movement plan</li>
-      <li>Progress tracking and adjustments</li>
-      <li>Messaging support</li>
-      <li>Designed around your schedule and available equipment</li>
-    </ul>
-  </article>
+<div class="service-horizontal">
+  <div class="service-horizontal-content">
+    
+    <div class="service-horizontal-left">
+      <div class="price">$25 per week</div>
+      <h3>Online Coaching</h3>
+      <p>
+        Remote support for clients wanting structure outside in-person coaching.
+      </p>
+    </div>
+
+    <div class="service-horizontal-right">
+      <ul>
+        <li>Personalised movement plan</li>
+        <li>Progress tracking and adjustments</li>
+        <li>Messaging support</li>
+        <li>Designed around your schedule and available equipment</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+          
           <p class="service-note">
   All coaching is tailored to the individual, with a focus on safe progression, confidence, and long-term movement quality.
 </p>
