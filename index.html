@@ -345,54 +345,42 @@ h3 {
 }
     .contact-grid { grid-template-columns: 1fr 1fr; }
 
-.service-horizontal {
-  max-width: 900px;
-  margin: 2rem auto 0 auto; /* centres it */
-}
-    .service-horizontal {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0,0,0,0.05);
-}
-    
-.service-horizontal {
-  margin-top: 2.5rem;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  padding: 1.8rem;
-}
-
-.service-horizontal-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.service-horizontal-left h3 {
-  margin-top: 0.6rem;
-}
-
-.service-horizontal-right ul {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.service-horizontal-right li {
-  margin-bottom: 0.5rem;
-}
-    .service-horizontal {
-  margin-top: 2.5rem;
+.service-featured {
+  margin-top: 2rem;
   background: #ffffff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 2rem;
+  grid-column: 1 / -1;
 }
-    @media (max-width: 768px) {
-  .service-horizontal-content {
-    grid-template-columns: 1fr;
-  }
+
+.service-featured--primary {
+  border: 2px solid var(--accent);
+  position: relative;
 }
+
+.service-featured--primary::before {
+  content: "RECOMMENDED PATH";
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.service-featured--secondary {
+  background: rgba(255,255,255,0.9);
+}
+
+.service-cta {
+  font-weight: 700;
+  color: var(--text);
+}
+    
     
     .card,
 .service-card,
@@ -860,7 +848,6 @@ h3 {
         <li>Designed around your schedule and available equipment</li>
       </ul>
       <p class="service-meta">Stay consistent and supported wherever you train</p>
-    </div>
     </article>
           
   <div class="service-featured service-featured--primary">
@@ -874,9 +861,8 @@ h3 {
     <li>Structure, accountability, and support</li>
   </ul>
   <p class="service-cta">The best way to rebuild confidence and create lasting results</p>
-  <p class="service-meta">
-    Pricing discussed after consultation based on your needs
-  </p>
+  <p class="service-meta">Pricing discussed after consultation based on your needs</p>
+    </div>
 
 <div class="service-featured service-featured--secondary">
   <div class="price">Consistency Option</div>
