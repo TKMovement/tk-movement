@@ -418,7 +418,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem; /* was 2rem */
 }
 
 .testimonial-image {
@@ -430,13 +430,20 @@ h3 {
 
 /* TEXT */
 .testimonial-content {
+  margin-top: 1rem;
+  text-align: left;
   max-width: 700px;
+  background: rgba(255,255,255,0.6);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .testimonial-quote {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.7;
+  max-width: 650px;
 }
 
 .testimonial-author {
@@ -447,6 +454,9 @@ h3 {
 .testimonial-context {
   color: var(--muted);
   font-size: 0.9rem;
+}
+    #testimonial .container {
+  max-width: 900px;
 }
 
 /* MOBILE */
