@@ -263,6 +263,19 @@
       color: var(--muted);
     }
 
+    .profile-placeholder {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  margin: 0 auto 1rem;
+  background: linear-gradient(
+    135deg,
+    #e3edf3,
+    #cfd8df
+  );
+}
+
 .profile-tagline {
   margin: -0.4rem 0 0.4rem;
   color: var(--muted);
@@ -819,7 +832,7 @@ h3 {
 
         <aside class="hero-card">
   <div class="profile-image-wrap">
-    <img src="Dan Brighurst Karate Profile Picture 2.png" alt="Dan Brighurst - Personal Trainer and Movement Coach" />
+    <div class="profile-placeholder"></div>
   </div>
 
   <div class="profile-caption">
