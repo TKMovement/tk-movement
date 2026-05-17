@@ -71,8 +71,18 @@
 }
 
 /* ABOUT */
+.about-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .about-image {
-  margin-top: 1rem;
+  margin-top: 0;
+}
+
+.about-image .image-placeholder {
+  aspect-ratio: 4 / 3;
 }
 
 /* SERVICES */
@@ -939,29 +949,32 @@ h3 {
           <p>TK Movement is the personal training and movement coaching brand of Dan Brighurst, created to support people who need a calmer, more thoughtful approach to exercise.</p>
         </div>
         <div class="about-wrap">
-          <div class="about-copy">
-            <p>Dan’s coaching approach combines strength training, functional movement, and martial arts-based body awareness. It is designed for people who want to improve mobility, rebuild strength after injury, and feel more capable in everyday life.</p>
-            <p>The service is especially suited to those who have felt excluded by mainstream fitness culture or who need a more individualised starting point.</p>
-            <p>Dan is completing a NZQA Level 4 Certificate in Exercise, has a NZQA Level 3 Certificate in Coaching, and is a martial arts instructor and founder of Taikan Kai Karate.</p>
-<p>Sessions aim to reduce fear around movement and replace it with structure, clarity, and gradual progress.</p>
-            <p>TK Movement is guided by <a href="https://taikankaikarate.org" target="_blank" rel="noopener noreferrer" class="tk-link">Taikan Kai</a> principles while operating as an independent personal training service.</p>
-          </div>
-          <div class="about-image">
-  <div class="image-placeholder">
-    <img src="TKM_Web_Screening_Image.jpg" alt="Movement screening session">
+  <div class="about-copy">
+    <p>Dan’s coaching approach combines strength training, functional movement, and martial arts-based body awareness. It is designed for people who want to improve mobility, rebuild strength after injury, and feel more capable in everyday life.</p>
+    <p>The service is especially suited to those who have felt excluded by mainstream fitness culture or who need a more individualised starting point.</p>
+    <p>Dan is completing a NZQA Level 4 Certificate in Exercise, has a NZQA Level 3 Certificate in Coaching, and is a martial arts instructor and founder of Taikan Kai Karate.</p>
+    <p>Sessions aim to reduce fear around movement and replace it with structure, clarity, and gradual progress.</p>
+    <p>TK Movement is guided by <a href="https://taikankaikarate.org" target="_blank" rel="noopener noreferrer" class="tk-link">Taikan Kai</a> principles while operating as an independent personal training service.</p>
+  </div>
+
+  <div class="about-media">
+    <div class="about-image">
+      <div class="image-placeholder">
+        <img src="TKM_Web_Screening_Image.jpg" alt="Movement screening session">
+      </div>
+    </div>
+
+    <aside class="about-side">
+      <h3>Core focus</h3>
+      <ul class="about-list">
+        <li>Chronic pain and previous injury</li>
+        <li>Movement confidence and body awareness</li>
+        <li>Strength for longevity and everyday function</li>
+        <li>Inclusive, respectful coaching</li>
+      </ul>
+    </aside>
   </div>
 </div>
-          <aside class="about-side">
-            <h3>Core focus</h3>
-            <ul class="about-list">
-              <li>Chronic pain and previous injury</li>
-              <li>Movement confidence and body awareness</li>
-              <li>Strength for longevity and everyday function</li>
-              <li>Inclusive, respectful coaching</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
     </section>
 
     <section class="section" id="services">
