@@ -768,22 +768,30 @@ h3 {
 
 .service-featured-with-image {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 2rem;
-  align-items: stretch;
+  align-items: center;
 }
 
 .service-featured-image {
   border-radius: var(--radius);
   overflow: hidden;
-  min-height: 320px;
+  height: 360px;
 }
 
 .service-featured-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center;
+}
+
+.service-featured--secondary .service-featured-image {
+  order: 2;
+}
+
+.service-featured--secondary .service-featured-content {
+  order: 1;
 }
 
     .contact-card strong {
@@ -886,10 +894,14 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .service-featured-image {
-    min-height: 240px;
+  .service-featured--secondary .service-featured-image,
+  .service-featured--secondary .service-featured-content {
+    order: initial;
   }
-}
+
+  .service-featured-image {
+    height: 260px;
+  }
       
     }
   </style>
